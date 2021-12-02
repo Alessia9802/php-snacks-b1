@@ -9,7 +9,25 @@ Olimpia Milano - Cantù | 55-60 -->
     'squadraOspite'=> 60,
 ];
 
-echo $partita_uno;
+ for ($i=0; $i < rand(1,99) ; $i++) { 
+    echo $i;
+} 
+
+function getArray ($min, $max, $nItems){
+   $newArray = [];
+
+   while (count($newArray) < $nItems ){
+       $number = rand($min, $max);
+
+       if (!in_array($number, $newArray)){
+           $newArray[] = $number;
+       }
+   }
+
+   return $newArray;
+   echo $newArray;
+}
+
 var_dump($partita_uno, $partita_uno['squadraCasa']);
 var_dump($partita_uno, $partita_uno['squadraOspite']);
 
@@ -21,14 +39,12 @@ $partita_due =[
 var_dump($partita_due, $partita_due['squadraCasa']);
 var_dump($partita_due, $partita_due['squadraOspite']);
 
-echo $partita_due;
 
 $partita_tre =[
     'squadraCasa' => 70,
     'squadraOspite'=> 20,
 ];
 
-echo $partita_tre;
 var_dump($partita_tre, $partita_tre['squadraCasa']);
 var_dump($partita_tre, $partita_tre['squadraOspite']);
 
@@ -43,6 +59,6 @@ var_dump($partita_tre, $partita_tre['squadraOspite']);
     <title>Document</title>
 </head>
 <body>
-    
+    <p> <?php  ?> </p>
 </body>
 </html>
