@@ -4,50 +4,29 @@ Stampiamo a schermo tutte le partite con questo schema.
 Olimpia Milano - Cantù | 55-60 -->
 
 <?php
- $partita_uno =[
-    'squadraCasa' => 55,
-    'squadraOspite'=> 60,
-];
-
- for ($i=0; $i < rand(1,99) ; $i++) { 
-    echo $i;
-} 
-
-function getArray ($min, $max, $nItems){
-   $newArray = [];
-
-   while (count($newArray) < $nItems ){
-       $number = rand($min, $max);
-
-       if (!in_array($number, $newArray)){
-           $newArray[] = $number;
-       }
-   }
-
-   return $newArray;
-   echo $newArray;
-}
-
-var_dump($partita_uno, $partita_uno['squadraCasa']);
-var_dump($partita_uno, $partita_uno['squadraOspite']);
-
-$partita_due =[
-    'squadraCasa' => 50,
-    'squadraOspite'=> 30,
-];
-
-var_dump($partita_due, $partita_due['squadraCasa']);
-var_dump($partita_due, $partita_due['squadraOspite']);
 
 
-$partita_tre =[
-    'squadraCasa' => 70,
-    'squadraOspite'=> 20,
-];
+$partite = [
+    [
+        "squadraCasa" => "Lakers",
+        "squadraOspite" => "Chicago Bulls",
+    ],
+    [
+        "squadraCasa" => "Golden State",
+        "squadraOspite" => "Olimpia Milano",
+    ],
+    [
+        "squadraCasa" => "Boston Celtics",
+        "squadraOspite" => "Miami Heats",
+    ],
+    [
+        "squadraCasa" => "Phoenix Suns",
+        "squadraOspite" => "Indiana Pacers",
+    ]  
+    ];
 
-var_dump($partita_tre, $partita_tre['squadraCasa']);
-var_dump($partita_tre, $partita_tre['squadraOspite']);
-
+$partite[0][2];
+ 
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +38,6 @@ var_dump($partita_tre, $partita_tre['squadraOspite']);
     <title>Document</title>
 </head>
 <body>
-    <p> <?php  ?> </p>
+    <!--  -->
 </body>
 </html>
