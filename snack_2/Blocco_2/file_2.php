@@ -1,6 +1,13 @@
 <?php
 
-$invitati = ["Marco", "Luisa", "Elena", "Sofia", "Gianni", "Alberto"];
+$invitati = [
+    ["name" => "Marco"],
+    ["name" => "Luisa"],
+    ["name" => "Elena"],
+    ["name" => "Sofia"],
+    ["name" => "Gianni"],
+    ["name" => "Alberto"],
+    ];
 
 ?>
 
