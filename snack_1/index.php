@@ -10,22 +10,30 @@ $partite = [
     [
         "squadraCasa" => "Lakers",
         "squadraOspite" => "Chicago Bulls",
+        "squadraCasa_punti" => rand(1, 100),
+        "squadraOspite_punti" => rand(1, 100)
     ],
     [
         "squadraCasa" => "Golden State",
         "squadraOspite" => "Olimpia Milano",
+        "squadraCasa_punti" => rand(1, 100),
+        "squadraOspite_punti" => rand(1, 100)
     ],
     [
         "squadraCasa" => "Boston Celtics",
         "squadraOspite" => "Miami Heats",
+        "squadraCasa_punti" => rand(1, 100),
+        "squadraOspite_punti" => rand(1, 100)
     ],
     [
         "squadraCasa" => "Phoenix Suns",
         "squadraOspite" => "Indiana Pacers",
+        "squadraCasa_punti" => rand(1, 100),
+        "squadraOspite_punti" => rand(1, 100)
     ]  
     ];
 
-$partite[0][2];
+
  
 ?>
 
@@ -38,6 +46,19 @@ $partite[0][2];
     <title>Document</title>
 </head>
 <body>
-    <!--  -->
+
+    <section class="snack1">
+    <h2>Snack 1</h2>
+
+    <?php for ($i = 0; $i < count($partite); $i++) :
+      $partita = $partite[$i];
+      # Olimpia Milano - Cantù | 55-60 
+    ?>
+      <p><?php echo $partita['squadraCasa']  . ' - ' . $partita['squadraOspite'] . ' | ' .  $partita['squadraCasa_punti'] . ' - ' . $partita['squadraOspite_punti'] ?> 
+    </p>
+
+    <?php endfor; ?>
+
+  </section>
 </body>
 </html>

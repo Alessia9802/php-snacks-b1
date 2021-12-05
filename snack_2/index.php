@@ -5,30 +5,19 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” 
 
 <?php
 
-#var_dump($_GET['email']);
 
-$email = $_GET['email'];
-$name = $_GET['name'];
-$age = $_GET['age'];
+if (isset($_GET['name']) && isset($_GET['age']) && isset($_GET['mail'])) {
+  $name = $_GET['name'];
+  $age = intval($_GET['age']);
+  $mail = $_GET['mail'];
 
-var_dump(strpos($email,'@'), strpos($email,'.'));
+  var_dump($name, $age, $mail);
 
-if(strpos($email,'@') && strpos($email,'.')){
-    $result='Accesso riuscito';
-} else{
-    $result='Accesso negato';
-}
-
-if(strlen($name) > 3){
-     $nameLength = "è maggiore di tre caratteri";
-} else{
-    $nameLength = "Non è maggiore di tre caratteri"
-}
-
-if($age <= 0){
-    $num = "è un numero";
-}else{
-    $num="Non è un numero";
+  if (strlen($name) > 3 &&  is_numeric($age) && strpos($mail, '@') && strpos($mail, '.')) {
+    echo 'Accesso Riuscito';
+  } else {
+    echo 'Accesso negato!';
+  }
 }
    
 ?>

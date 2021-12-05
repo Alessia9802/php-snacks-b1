@@ -5,24 +5,48 @@ Stampare ogni data con i relativi post. -->
 
 <?php
  
- $array = [
-     [
-         "date" => "01-01-2007",
-         "post" => "Post_1"
-     ],
-     [
-         "date" => "02-06-2008",
-         "post" => "Post_2"
-     ],
-     [
-         "date" => "03-07-2009",
-         "post" => "Post_3"
-     ],
-     [
-         "date" => "14-09-2019",
-         "post" => "Post_4"
-     ]
- ];
+ $posts = [
+
+  '13/18/2020' => [
+    [
+      'title' => 'Post 1',
+      'author' => 'Steve Jobs',
+      'text' => 'Testo post 1'
+    ],
+    [
+      'title' => 'Post 2',
+      'author' => 'Steve Jobs',
+      'text' => 'Testo post 2'
+    ],
+  ],
+  '28/04/2021' => [
+    [
+      'title' => 'Post 3',
+      'author' => 'Steve Jobs',
+      'text' => 'Testo post 3'
+    ]
+  ],
+  '17/11/2021' => [
+    [
+      'title' => 'Post 4',
+      'author' => 'Steve Jobs',
+      'text' => 'Testo post 4'
+    ],
+    [
+      'title' => 'Post 5',
+      'author' => 'Steve Jobs',
+      'text' => 'Testo post 5'
+    ],
+    [
+      'title' => 'Post 6',
+      'author' => 'Steve Jobs',
+      'text' => 'Testo post 6'
+    ]
+  ],
+];
+
+$keys = array_keys($posts);
+var_dump($keys);
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +58,27 @@ Stampare ogni data con i relativi post. -->
     <title>Document</title>
 </head>
 <body>
-    <p> <?php echo $array ?> </p>
+     <section class="snack3">
+    <h2>Snack 3</h2>
+
+    <?php for ($i = 0; $i < count($keys); $i++) :
+      $key = $keys[$i]; ?>
+
+      <h3><?php echo $key; ?></h3>
+
+      <?php for ($j = 0; $j < count($posts[$key]); $j++) :
+        
+        $post = $posts[$key][$j]; ?>
+
+        <h4><?php echo $post['title']; ?></h4>
+        <p><?php echo $post['text']; ?></p>
+
+    <?php
+      endfor;
+    endfor;
+
+
+    ?>
+  </section>
 </body>
 </html>

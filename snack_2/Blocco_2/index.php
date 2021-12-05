@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="./file_2.php" method="get" <?php echo $invitati == $invitati ? "ok" : "ko" ?> >
+    <form action="./file_2.php" method="get" <?php echo $invitati == "name" ? "ok" : "ko" ?> >
        <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" placeholder="Inserisci Nome">
          <input type="submit" value="Invia dati">
